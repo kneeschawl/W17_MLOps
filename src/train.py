@@ -120,7 +120,7 @@ for model_info in models_to_train:
             best_run_id = run.info.run_id
             best_model_name = model_info["name"]
 
-print(f"\n[★] Best Performing Model: {best_model_name} (Run ID: {best_run_id}) with F1: {best_f1:.4f}")
+print(f"\n[*] Best Performing Model: {best_model_name} (Run ID: {best_run_id}) with F1: {best_f1:.4f}")
 
 model_uri = f"runs:/{best_run_id}/model"
 registered_model = mlflow.register_model(model_uri, "Telco_Churn_Best_Model")
@@ -128,4 +128,4 @@ registered_model = mlflow.register_model(model_uri, "Telco_Churn_Best_Model")
 client = MlflowClient()
 client.transition_model_version_stage(name="Telco_Churn_Best_Model", version=registered_model.version, stage="Staging")
 client.transition_model_version_stage(name="Telco_Churn_Best_Model", version=registered_model.version, stage="Production")
-print(f"[✓] Model 'Telco_Churn_Best_Model' Version {registered_model.version} promoted to 'Production'.")
+print(f"[+] Model 'Telco_Churn_Best_Model' Version {registered_model.version} promoted to 'Production'.")
