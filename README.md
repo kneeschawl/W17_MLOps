@@ -19,7 +19,7 @@ Using `uv` eliminates several common Python environment failure modes in this pr
 To verify that the pipeline executes cleanly from a fresh clone:
 
 ```powershell
-git clone <YOUR_REPOSITORY_URL>
+git clone https://github.com/kneeschawl/W17_MLOps.git
 cd W17_MLOPS
 uv sync
 uv run python src/agent.py
