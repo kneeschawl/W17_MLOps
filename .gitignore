@@ -1,4 +1,4 @@
-# Python Virtual Environment
+# Python Virtual Environments
 .venv/
 venv/
 ENV/
@@ -10,19 +10,15 @@ __pycache__/
 *$py.class
 *.so
 
-# Data Files (raw, reference, and current datasets)
+# Data Files (raw, reference, and current datasets should stay local)
 data/*.csv
 data/
 
-# MLflow Tracking & Artifacts
+# MLflow Local Tracking Databases & Artifact Cache
 mlruns/
 mlflow.db
 mlflow.db-journal
 .mlflow/
-
-# Generated Reports & Confusion Matrices
-reports/*.png
-reports/*.html
 
 # OS / Environment generated files
 .DS_Store
